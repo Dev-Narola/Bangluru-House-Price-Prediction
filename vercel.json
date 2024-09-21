@@ -1,12 +1,13 @@
 {
+    "version": 2,
     "routes": [
         {
             "src": "/predict",
-            "dest": "/predict"
+            "dest": "/api/index.py"
         },
         {
             "src": "/(.*)",
-            "dest": "/"
+            "dest": "/api/index.py"
         }
     ]
 }
