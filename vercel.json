@@ -1,11 +1,11 @@
 {
     "routes": [
         {
-            "src": "/",
-            "dest": "/"
+            "src": "/predict",
+            "dest": "/predict"
         },
         {
-            "src": "/predict",
+            "src": "/(.*)",
             "dest": "/"
         }
     ]
