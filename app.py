@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import pickle
 import numpy as np
@@ -16,7 +16,7 @@ with open('columns.json', 'r') as f:
 
 @app.route("/")
 def home():
-    return "Hello, world!"
+    return render_template("welcome.html")
 
 @app.route("/predict", methods=['POST'])
 def predict():
