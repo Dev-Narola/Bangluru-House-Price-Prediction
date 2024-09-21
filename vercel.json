@@ -1,13 +1,18 @@
 {
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/"
+        }
+    ],
     "version": 2,
-    "routes": [
+    "builds": [
         {
-            "src": "/predict",
-            "dest": "/api/index.py"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/api/index.py"
+            "src": "./app.py",
+            "use": "@vercel/python",
+            "config": {
+                "runtime": "python3.9"
+            }
         }
     ]
 }
